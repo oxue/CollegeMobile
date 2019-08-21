@@ -161,7 +161,6 @@
 				4AD9981960BE093EB5C327C0 /* Pods-CollegeMobileTests.debug.xcconfig */,
 				E62B92A0A01043EDD038467D /* Pods-CollegeMobileTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -308,6 +307,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
