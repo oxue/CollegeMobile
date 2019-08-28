@@ -13,9 +13,25 @@ class LoginScreen extends React.Component{
     password: ""
   }
 
-  onLoginButtonPressed = () => {
-    console.log(`logging in with ${this.state.email} and ${this.state.password}`)
-    
+  onLoginButtonPressed = async () => {
+    try {
+      console.log(`logging in with ${this.state.email} and ${this.state.password}`)
+      let email = this.state.email;
+      let password = this.state.password;
+      let loginResponse = await fetch("http://localhost:3000/login", {
+        method:"POST",
+        body: JSON.stringify({
+          email, password
+        }),
+      });
+      let userJson = await loginResponse.json()
+      if (userJson.state == 'success') {
+        const {navigate} = this.props.navigation;
+        navigate('Home')
+      }
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   render() {

@@ -28,9 +28,10 @@ import {createStackNavigator, createAppContainer} from 'react-navigation';
 
 import SignupScreen from './components/SignupScreen';
 import LoginScreen from './components/LoginScreen';
+import HomeScreen from './components/HomeScreen';
 
 const MainNavigator = createStackNavigator({
-  Home: SignupScreen,
+  Home: HomeScreen,
   Login: LoginScreen,
 },{
   initialRouteName: 'Login'
