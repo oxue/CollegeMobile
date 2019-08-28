@@ -32,6 +32,8 @@ import LoginScreen from './components/LoginScreen';
 const MainNavigator = createStackNavigator({
   Home: SignupScreen,
   Login: LoginScreen,
+},{
+  initialRouteName: 'Login'
 });
 
 const App = createAppContainer(MainNavigator);
